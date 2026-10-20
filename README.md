@@ -1,4 +1,5 @@
-Test
+-WortKarten
++WortKarten 2
 # WortKarten 2.0 – German vocabulary trainer (ad-free, offline)
 
 No ads, no account, no internet permission. All data stays on your phone.
