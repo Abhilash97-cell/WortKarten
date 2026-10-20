@@ -1,0 +1,101 @@
+german;plural;grammar;translation;category;subtopic;level;register;example;example_en;note
+mit;;mit + Dat;with;Kleine Wörter;Präpositionen;A1;;Ich fahre mit dem Bus.;I'm going by bus.;
+ohne;;ohne + Akk;without;Kleine Wörter;Präpositionen;A1;;Kaffee ohne Zucker, bitte.;Coffee without sugar, please.;
+für;;für + Akk;for;Kleine Wörter;Präpositionen;A1;;Das Geschenk ist für dich.;The present is for you.;
+gegen;;gegen + Akk;against / around (time);Kleine Wörter;Präpositionen;A2;;Ich komme gegen acht.;I'll come around eight.;
+durch;;durch + Akk;through;Kleine Wörter;Präpositionen;A2;;Wir gehen durch den Park.;We're walking through the park.;
+um;;um + Akk;around / at (time);Kleine Wörter;Präpositionen;A1;;Der Kurs beginnt um neun.;The course starts at nine.;
+aus;;aus + Dat;from, out of;Kleine Wörter;Präpositionen;A1;;Ich komme aus Indien.;I come from India.;
+bei;;bei + Dat;at, near, with;Kleine Wörter;Präpositionen;A1;;Ich arbeite bei Volkswagen.;I work at Volkswagen.;
+von;;von + Dat;from, of, by;Kleine Wörter;Präpositionen;A1;;Das ist ein Geschenk von meiner Mutter.;That's a present from my mother.;
+zu (Präp.);;zu + Dat;to;Kleine Wörter;Präpositionen;A1;;Ich gehe zum Arzt.;I'm going to the doctor.;
+gegenüber (Präp.);;gegenüber + Dat;opposite, towards;Kleine Wörter;Präpositionen;B1;;Er ist mir gegenüber immer fair.;He's always fair towards me.;
+an;;an + Akk/Dat;at, on (vertical), to;Kleine Wörter;Präpositionen;A1;;Das Bild hängt an der Wand.;The picture is hanging on the wall.;
+auf;;auf + Akk/Dat;on (top of);Kleine Wörter;Präpositionen;A1;;Das Buch liegt auf dem Tisch.;The book is on the table.;
+in;;in + Akk/Dat;in, into;Kleine Wörter;Präpositionen;A1;;Ich wohne in Kassel.;I live in Kassel.;
+über;;über + Akk/Dat;over, above, about;Kleine Wörter;Präpositionen;A2;;Wir sprechen über das Projekt.;We're talking about the project.;
+unter;;unter + Akk/Dat;under, among;Kleine Wörter;Präpositionen;A2;;Die Katze schläft unter dem Bett.;The cat sleeps under the bed.;
+hinter;;hinter + Akk/Dat;behind;Kleine Wörter;Präpositionen;A2;;Der Parkplatz ist hinter dem Haus.;The car park is behind the building.;
+vor (Ort);;vor + Akk/Dat;in front of;Kleine Wörter;Präpositionen;A2;;Ich warte vor dem Kino.;I'm waiting in front of the cinema.;
+statt;;statt + Gen;instead of;Kleine Wörter;Präpositionen;B2;;Statt eines Autos kaufe ich ein Fahrrad.;Instead of a car I'm buying a bike.;Also: anstatt.
+trotz;;trotz + Gen;despite;Kleine Wörter;Präpositionen;B1;;Trotz des Regens sind wir gewandert.;Despite the rain we went hiking.;
+wegen;;wegen + Gen;because of;Kleine Wörter;Präpositionen;B1;;Wegen des Streiks fahren keine Züge.;Because of the strike no trains are running.;Colloquially + Dat.
+laut (Präp.);;laut + Dat/Gen;according to;Kleine Wörter;Präpositionen;B2;;Laut Vertrag habe ich 30 Tage Urlaub.;According to the contract I have 30 days off.;
+entlang;;entlang + Akk;along;Kleine Wörter;Präpositionen;B1;;Wir gehen den Fluss entlang.;We're walking along the river.;
+dank;;dank + Dat/Gen;thanks to;Kleine Wörter;Präpositionen;B2;;Dank deiner Hilfe hat es geklappt.;Thanks to your help it worked.;
+mithilfe;;mithilfe + Gen;with the help of;Kleine Wörter;Präpositionen;C1;;Mithilfe von KI erstellen wir CAD-Modelle.;We create CAD models with the help of AI.;
+anhand;;anhand + Gen;on the basis of;Kleine Wörter;Präpositionen;C1;;Anhand der Daten sieht man den Trend.;You can see the trend from the data.;
+hinsichtlich;;hinsichtlich + Gen;with regard to;Kleine Wörter;Präpositionen;C1;formell;Hinsichtlich der Kosten gibt es noch Fragen.;There are still questions regarding the costs.;
+infolge;;infolge + Gen;as a result of;Kleine Wörter;Präpositionen;C1;formell;Infolge des Unfalls ist die Straße gesperrt.;The road is closed as a result of the accident.;
+und;;;and;Kleine Wörter;Konjunktionen;A1;;Ich trinke Kaffee und esse ein Brötchen.;I drink coffee and eat a roll.;
+oder;;;or;Kleine Wörter;Konjunktionen;A1;;Möchtest du Tee oder Kaffee?;Would you like tea or coffee?;
+aber;;;but;Kleine Wörter;Konjunktionen;A1;;Die Wohnung ist schön, aber teuer.;The flat is nice but expensive.;
+denn;;;because (main clause);Kleine Wörter;Konjunktionen;A2;;Ich bleibe zu Hause, denn ich bin krank.;I'm staying home, because I'm ill.;Verb stays in position 2.
+weil;;;because;Kleine Wörter;Konjunktionen;A2;;Ich bleibe zu Hause, weil ich krank bin.;I'm staying home because I'm ill.;Verb goes to the end.
+dass;;;that;Kleine Wörter;Konjunktionen;A2;;Ich hoffe, dass du kommst.;I hope that you'll come.;
+ob;;;whether, if;Kleine Wörter;Konjunktionen;B1;;Ich weiß nicht, ob er Zeit hat.;I don't know whether he has time.;
+wenn;;;if, when (repeated/future);Kleine Wörter;Konjunktionen;A2;;Wenn ich Zeit habe, rufe ich an.;If I have time, I'll call.;
+als;;;when (single past event) / than;Kleine Wörter;Konjunktionen;B1;;Als ich nach Deutschland kam, sprach ich kein Deutsch.;When I came to Germany I spoke no German.;Also: größer als = bigger than.
+während (Konj.);;;while, whereas;Kleine Wörter;Konjunktionen;B1;;Während ich koche, deckst du den Tisch.;While I cook, you set the table.;
+bevor;;;before;Kleine Wörter;Konjunktionen;B1;;Ruf mich an, bevor du losfährst.;Call me before you set off.;
+nachdem;;;after;Kleine Wörter;Konjunktionen;B1;;Nachdem ich gegessen hatte, ging ich spazieren.;After I had eaten, I went for a walk.;Usually with pluperfect.
+seitdem (Konj.);;;since;Kleine Wörter;Konjunktionen;B1;;Seitdem ich hier wohne, fahre ich Rad.;Since I've lived here, I've been cycling.;
+bis (Konj.);;;until;Kleine Wörter;Konjunktionen;B1;;Warte, bis ich zurück bin.;Wait until I'm back.;
+sobald;;;as soon as;Kleine Wörter;Konjunktionen;B1;;Ich melde mich, sobald ich etwas weiß.;I'll get in touch as soon as I know something.;
+solange;;;as long as;Kleine Wörter;Konjunktionen;B1;;Solange es nicht regnet, sitzen wir draußen.;As long as it doesn't rain, we'll sit outside.;
+obwohl;;;although;Kleine Wörter;Konjunktionen;B1;;Obwohl es kalt war, sind wir schwimmen gegangen.;Although it was cold, we went swimming.;
+damit;;;so that;Kleine Wörter;Konjunktionen;B1;;Ich spreche langsam, damit du mich verstehst.;I'm speaking slowly so that you understand me.;
+um … zu;;;in order to;Kleine Wörter;Konjunktionen;B1;;Ich lerne Deutsch, um in Deutschland zu arbeiten.;I'm learning German in order to work in Germany.;
+sodass;;;so that (result);Kleine Wörter;Konjunktionen;B2;;Es regnete stark, sodass das Spiel ausfiel.;It rained heavily, so the game was cancelled.;
+falls;;;in case, if;Kleine Wörter;Konjunktionen;B1;;Falls du Fragen hast, schreib mir.;In case you have questions, write to me.;
+sofern;;;provided that;Kleine Wörter;Konjunktionen;C1;;Sofern nichts dazwischenkommt, komme ich.;Provided nothing comes up, I'll come.;
+indem;;;by (doing);Kleine Wörter;Konjunktionen;B2;;Man lernt am besten, indem man viel spricht.;You learn best by speaking a lot.;
+je … desto;;;the … the;Kleine Wörter;Konjunktionen;B2;;Je mehr ich übe, desto besser werde ich.;The more I practise, the better I get.;
+sowohl … als auch;;;both … and;Kleine Wörter;Konjunktionen;B2;;Ich spreche sowohl Englisch als auch Deutsch.;I speak both English and German.;
+weder … noch;;;neither … nor;Kleine Wörter;Konjunktionen;B2;;Ich habe weder Zeit noch Geld.;I have neither time nor money.;
+entweder … oder;;;either … or;Kleine Wörter;Konjunktionen;B1;;Entweder wir fahren heute, oder wir bleiben bis Montag.;Either we leave today or we stay until Monday.;
+nicht nur … sondern auch;;;not only … but also;Kleine Wörter;Konjunktionen;B2;;Er ist nicht nur Ingenieur, sondern auch Musiker.;He's not only an engineer but also a musician.;
+anstatt dass;;;instead of (+ clause);Kleine Wörter;Konjunktionen;C1;;Anstatt dass er anruft, schreibt er nur.;Instead of calling, he just texts.;
+als ob;;;as if;Kleine Wörter;Konjunktionen;B2;;Er tut so, als ob er nichts wüsste.;He acts as if he knew nothing.;
+wer;;;who;Kleine Wörter;Fragewörter & Pronomen;A1;;Wer ist das?;Who is that?;
+was;;;what;Kleine Wörter;Fragewörter & Pronomen;A1;;Was machst du am Wochenende?;What are you doing at the weekend?;
+wo;;;where;Kleine Wörter;Fragewörter & Pronomen;A1;;Wo wohnst du?;Where do you live?;
+wohin;;;where (to);Kleine Wörter;Fragewörter & Pronomen;A1;;Wohin fährst du im Urlaub?;Where are you going on holiday?;
+woher;;;where from;Kleine Wörter;Fragewörter & Pronomen;A1;;Woher kommst du?;Where are you from?;
+wann;;;when;Kleine Wörter;Fragewörter & Pronomen;A1;;Wann fängt der Film an?;When does the film start?;
+warum;;;why;Kleine Wörter;Fragewörter & Pronomen;A1;;Warum lernst du Deutsch?;Why are you learning German?;
+wieso;;;why;Kleine Wörter;Fragewörter & Pronomen;A2;umg;Wieso bist du noch hier?;Why are you still here?;Also: weshalb.
+wie;;;how;Kleine Wörter;Fragewörter & Pronomen;A1;;Wie geht es dir?;How are you?;
+wie viel;;;how much;Kleine Wörter;Fragewörter & Pronomen;A1;;Wie viel kostet das?;How much does that cost?;
+wie viele;;;how many;Kleine Wörter;Fragewörter & Pronomen;A1;;Wie viele Leute kommen?;How many people are coming?;
+welcher;;;which;Kleine Wörter;Fragewörter & Pronomen;A2;;Welcher Bus fährt zum Bahnhof?;Which bus goes to the station?;welche / welches.
+wozu;;;what for;Kleine Wörter;Fragewörter & Pronomen;B1;;Wozu brauchst du das?;What do you need that for?;
+womit;;;with what;Kleine Wörter;Fragewörter & Pronomen;B2;;Womit kann ich Ihnen helfen?;How can I help you?;
+worüber;;;about what;Kleine Wörter;Fragewörter & Pronomen;B2;;Worüber habt ihr gesprochen?;What did you talk about?;
+jemand;;;someone;Kleine Wörter;Fragewörter & Pronomen;A2;;Hat jemand meinen Schlüssel gesehen?;Has anyone seen my key?;
+niemand;;;no one;Kleine Wörter;Fragewörter & Pronomen;A2;;Niemand war zu Hause.;No one was at home.;
+etwas;;;something;Kleine Wörter;Fragewörter & Pronomen;A2;;Möchtest du etwas trinken?;Would you like something to drink?;
+nichts;;;nothing;Kleine Wörter;Fragewörter & Pronomen;A1;;Ich habe nichts gehört.;I didn't hear anything.;
+alles;;;everything;Kleine Wörter;Fragewörter & Pronomen;A1;;Alles klar!;All clear!;
+jeder;;;every, each, everyone;Kleine Wörter;Fragewörter & Pronomen;A2;;Jeder kann mitmachen.;Everyone can take part.;
+man;;;one, you, people;Kleine Wörter;Fragewörter & Pronomen;A2;;Hier darf man nicht rauchen.;You're not allowed to smoke here.;
+selbst;;;oneself / even;Kleine Wörter;Fragewörter & Pronomen;B1;;Das habe ich selbst gemacht.;I made that myself.;
+einander;;;each other;Kleine Wörter;Fragewörter & Pronomen;C1;;Wir helfen einander.;We help each other.;Colloquial: uns gegenseitig.
+irgendjemand;;;anyone, someone;Kleine Wörter;Fragewörter & Pronomen;B1;;Kann mir irgendjemand helfen?;Can anyone help me?;
+mancher;;;some, many a;Kleine Wörter;Fragewörter & Pronomen;B2;;Manche Leute arbeiten lieber nachts.;Some people prefer working at night.;
+sämtliche;;;all, the entire;Kleine Wörter;Fragewörter & Pronomen;C1;formell;Sämtliche Unterlagen liegen vor.;All the documents are available.;
+derselbe;;;the same (one);Kleine Wörter;Fragewörter & Pronomen;B2;;Wir wohnen im selben Haus.;We live in the same building.;
+dafür;;;for it, in favour;Kleine Wörter;Da-Wörter & Verweise;B1;;Ich bin dafür.;I'm in favour.;Opposite: dagegen.
+dagegen;;;against it;Kleine Wörter;Da-Wörter & Verweise;B1;;Hast du etwas dagegen, wenn ich das Fenster öffne?;Do you mind if I open the window?;
+darüber;;;about it;Kleine Wörter;Da-Wörter & Verweise;B1;;Lass uns morgen darüber sprechen.;Let's talk about it tomorrow.;
+darauf;;;on it, for it;Kleine Wörter;Da-Wörter & Verweise;B1;;Ich freue mich darauf.;I'm looking forward to it.;
+daran;;;of it, about it;Kleine Wörter;Da-Wörter & Verweise;B1;;Ich habe nicht daran gedacht.;I didn't think of it.;
+davon;;;of it, from it;Kleine Wörter;Da-Wörter & Verweise;B1;;Ich habe davon gehört.;I've heard about it.;
+damit (Verweis);;;with it;Kleine Wörter;Da-Wörter & Verweise;B1;;Was willst du damit machen?;What do you want to do with it?;
+dazu;;;to it, in addition;Kleine Wörter;Da-Wörter & Verweise;B1;;Was sagst du dazu?;What do you say to that?;
+dabei (Verweis);;;with it, while doing so;Kleine Wörter;Da-Wörter & Verweise;B2;;Ich höre Musik und entspanne mich dabei.;I listen to music and relax while doing so.;
+darum;;;that's why / about it;Kleine Wörter;Da-Wörter & Verweise;B1;;Darum geht es nicht.;That's not the point.;
+hierzu;;;on this, regarding this;Kleine Wörter;Da-Wörter & Verweise;C1;formell;Hierzu habe ich noch eine Frage.;I have another question on this.;
+diesbezüglich;;;in this regard;Kleine Wörter;Da-Wörter & Verweise;C1;formell;Diesbezüglich melde ich mich morgen.;I'll get back to you on this tomorrow.;
+dementsprechend;;;accordingly;Kleine Wörter;Da-Wörter & Verweise;C1;;Die Nachfrage ist hoch, dementsprechend steigen die Preise.;Demand is high and prices are rising accordingly.;
+ebendiese;;;this very;Kleine Wörter;Da-Wörter & Verweise;C1;formell;Ebendiese Frage hat mich auch beschäftigt.;That very question has been on my mind too.;

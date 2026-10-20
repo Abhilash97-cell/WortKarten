@@ -1,0 +1,151 @@
+german;plural;grammar;translation;category;subtopic;level;register;example;example_en;note
+die Bank;die Banken;;bank;Bank, Steuern & Versicherung;Konto & Bank;A1;;Ich muss noch zur Bank.;I still need to go to the bank.;
+das Konto;die Konten;;account;Bank, Steuern & Versicherung;Konto & Bank;A2;;Ich möchte ein Konto eröffnen.;I'd like to open an account.;
+das Girokonto;die Girokonten;;current account;Bank, Steuern & Versicherung;Konto & Bank;B1;;Das Gehalt geht auf mein Girokonto.;My salary goes into my current account.;
+ein Konto eröffnen;;eröffnet · eröffnete · hat eröffnet;to open an account;Bank, Steuern & Versicherung;Konto & Bank;B1;;Für die Kontoeröffnung brauchen Sie Ihren Pass.;To open an account you need your passport.;
+ein Konto kündigen;;kündigt · kündigte · hat gekündigt;to close an account;Bank, Steuern & Versicherung;Konto & Bank;B1;;Ich habe mein altes Konto gekündigt.;I closed my old account.;
+die Kontoführungsgebühr;die Kontoführungsgebühren;;account maintenance fee;Bank, Steuern & Versicherung;Konto & Bank;B2;;Die Bank verlangt fünf Euro Kontoführungsgebühr im Monat.;The bank charges a five-euro account fee each month.;
+der Kontoauszug;die Kontoauszüge;;bank statement;Bank, Steuern & Versicherung;Konto & Bank;B1;;Den Kontoauszug kann ich online herunterladen.;I can download the bank statement online.;
+der Kontostand;die Kontostände;;account balance;Bank, Steuern & Versicherung;Konto & Bank;B1;;Mein Kontostand ist leider im Minus.;Unfortunately my balance is in the red.;
+die IBAN;die IBANs;;IBAN (account number);Bank, Steuern & Versicherung;Konto & Bank;B1;;Bitte geben Sie Ihre IBAN an.;Please provide your IBAN.;
+die Überweisung;die Überweisungen;;bank transfer;Bank, Steuern & Versicherung;Konto & Bank;B1;;Die Überweisung dauert einen Werktag.;The transfer takes one working day.;
+überweisen;;überweist · überwies · hat überwiesen;to transfer (money);Bank, Steuern & Versicherung;Konto & Bank;B1;;Ich überweise dir das Geld heute.;I'll transfer the money to you today.;
+der Dauerauftrag;die Daueraufträge;;standing order;Bank, Steuern & Versicherung;Konto & Bank;B2;;Die Miete zahle ich per Dauerauftrag.;I pay the rent by standing order.;
+die Lastschrift;die Lastschriften;;direct debit;Bank, Steuern & Versicherung;Konto & Bank;B2;;Der Strom wird per Lastschrift abgebucht.;Electricity is paid by direct debit.;
+das Lastschriftmandat;die Lastschriftmandate;;direct debit mandate;Bank, Steuern & Versicherung;Konto & Bank;C1;formell;Bitte erteilen Sie uns ein SEPA-Lastschriftmandat.;Please grant us a SEPA direct debit mandate.;
+abbuchen;;bucht ab · buchte ab · hat abgebucht;to debit;Bank, Steuern & Versicherung;Konto & Bank;B2;;Der Betrag wird am Monatsanfang abgebucht.;The amount is debited at the beginning of the month.;
+der Betrag;die Beträge;;amount;Bank, Steuern & Versicherung;Konto & Bank;B1;;Bitte überweisen Sie den Betrag bis zum 15.;Please transfer the amount by the 15th.;
+der Verwendungszweck;die Verwendungszwecke;;payment reference;Bank, Steuern & Versicherung;Konto & Bank;B2;;Als Verwendungszweck bitte die Rechnungsnummer angeben.;Please give the invoice number as the payment reference.;
+der Empfänger;die Empfänger;;recipient, payee;Bank, Steuern & Versicherung;Konto & Bank;B1;;Der Name des Empfängers stimmt nicht.;The recipient's name isn't correct.;
+die Gutschrift;die Gutschriften;;credit (to account);Bank, Steuern & Versicherung;Konto & Bank;C1;;Die Gutschrift erscheint morgen auf dem Konto.;The credit will appear on the account tomorrow.;
+der Dispo;die Dispos;;overdraft;Bank, Steuern & Versicherung;Konto & Bank;B2;umg;Ich bin schon wieder im Dispo.;I'm in my overdraft again.;Full: Dispositionskredit.
+die EC-Karte;die EC-Karten;;debit card;Bank, Steuern & Versicherung;Konto & Bank;A2;;Kann ich mit EC-Karte zahlen?;Can I pay by debit card?;Now often called Girocard.
+die Kreditkarte;die Kreditkarten;;credit card;Bank, Steuern & Versicherung;Konto & Bank;A2;;Nehmen Sie Kreditkarte?;Do you take credit cards?;
+die PIN;die PINs;;PIN;Bank, Steuern & Versicherung;Konto & Bank;A2;;Geben Sie bitte Ihre PIN ein.;Please enter your PIN.;
+der Geldautomat;die Geldautomaten;;cash machine, ATM;Bank, Steuern & Versicherung;Konto & Bank;A2;;Wo ist der nächste Geldautomat?;Where is the nearest cash machine?;
+Geld abheben;;hebt ab · hob ab · hat abgehoben;to withdraw money;Bank, Steuern & Versicherung;Konto & Bank;A2;;Ich muss noch Geld abheben.;I still need to withdraw money.;
+bar;;;cash, in cash;Bank, Steuern & Versicherung;Konto & Bank;A2;;Zahlen Sie bar oder mit Karte?;Are you paying cash or by card?;
+kontaktlos;;;contactless;Bank, Steuern & Versicherung;Konto & Bank;B1;;Ich zahle meistens kontaktlos mit dem Handy.;I usually pay contactless with my phone.;
+das Onlinebanking;;;online banking;Bank, Steuern & Versicherung;Konto & Bank;B1;;Im Onlinebanking sehe ich alle Buchungen.;In online banking I can see all transactions.;
+die TAN;die TANs;;transaction code;Bank, Steuern & Versicherung;Konto & Bank;B1;;Die TAN bekommen Sie per App.;You receive the TAN via the app.;
+sperren;;sperrt · sperrte · hat gesperrt;to block;Bank, Steuern & Versicherung;Konto & Bank;B1;;Ich muss sofort meine Karte sperren lassen.;I have to get my card blocked immediately.;
+die Filiale;die Filialen;;branch;Bank, Steuern & Versicherung;Konto & Bank;B1;;Die Bank hat keine Filiale in meiner Nähe.;The bank has no branch near me.;
+die Schufa;;;German credit bureau;Bank, Steuern & Versicherung;Konto & Bank;B2;;Für die Wohnung brauche ich eine Schufa-Auskunft.;For the flat I need a Schufa credit report.;
+die Bonität;;;creditworthiness;Bank, Steuern & Versicherung;Konto & Bank;C1;;Die Bank prüft Ihre Bonität.;The bank checks your creditworthiness.;
+der Kontoinhaber;die Kontoinhaber;;account holder;Bank, Steuern & Versicherung;Konto & Bank;B2;;Der Kontoinhaber muss die Überweisung bestätigen.;The account holder has to confirm the transfer.;
+die Steuererklärung;die Steuererklärungen;;tax return;Bank, Steuern & Versicherung;Steuern;B1;;Die Steuererklärung mache ich mit ELSTER.;I do my tax return with ELSTER.;
+die Einkommensteuer;;;income tax;Bank, Steuern & Versicherung;Steuern;B2;;Die Einkommensteuer wird direkt vom Lohn abgezogen.;Income tax is deducted directly from wages.;
+die Lohnsteuer;;;wage tax (PAYE);Bank, Steuern & Versicherung;Steuern;B2;;Der Arbeitgeber zahlt die Lohnsteuer ans Finanzamt.;The employer pays the wage tax to the tax office.;
+die Steuerklasse;die Steuerklassen;;tax class;Bank, Steuern & Versicherung;Steuern;B2;;Als Ledige bin ich in Steuerklasse 1.;As a single person I'm in tax class 1.;Changes after marriage (e.g. 3/5 or 4/4).
+die Steuernummer;die Steuernummern;;tax number;Bank, Steuern & Versicherung;Steuern;B2;;Die Steuernummer steht auf dem Steuerbescheid.;The tax number is on the tax assessment.;Not the same as the Steuer-ID.
+der Steuerbescheid;die Steuerbescheide;;tax assessment;Bank, Steuern & Versicherung;Steuern;B2;;Laut Steuerbescheid bekomme ich 600 Euro zurück.;According to the tax assessment I'm getting 600 euros back.;
+die Steuererstattung;die Steuererstattungen;;tax refund;Bank, Steuern & Versicherung;Steuern;B2;;Die Steuererstattung kam nach sechs Wochen.;The tax refund came after six weeks.;
+die Nachzahlung;die Nachzahlungen;;additional payment;Bank, Steuern & Versicherung;Steuern;B2;;Leider muss ich eine Nachzahlung leisten.;Unfortunately I have to make an additional payment.;
+absetzen;;setzt ab · setzte ab · hat abgesetzt;to deduct (from tax);Bank, Steuern & Versicherung;Steuern;B2;;Die Fahrtkosten kann man von der Steuer absetzen.;You can deduct travel costs from your tax.;
+steuerlich absetzbar;;;tax-deductible;Bank, Steuern & Versicherung;Steuern;C1;;Der Laptop für die Arbeit ist steuerlich absetzbar.;The work laptop is tax-deductible.;
+die Werbungskosten;;(Plural);work-related expenses;Bank, Steuern & Versicherung;Steuern;C1;;Umzugskosten zählen zu den Werbungskosten.;Removal costs count as work-related expenses.;
+die Pendlerpauschale;die Pendlerpauschalen;;commuter allowance;Bank, Steuern & Versicherung;Steuern;C1;;Mit der Pendlerpauschale spare ich Steuern.;With the commuter allowance I save tax.;Officially: Entfernungspauschale.
+der Freibetrag;die Freibeträge;;tax-free allowance;Bank, Steuern & Versicherung;Steuern;C1;;Bis zum Freibetrag zahlt man keine Steuern.;You pay no tax up to the allowance.;
+das Einkommen;die Einkommen;;income;Bank, Steuern & Versicherung;Steuern;B1;;Wie hoch ist Ihr monatliches Einkommen?;What is your monthly income?;
+die Lohnsteuerbescheinigung;die Lohnsteuerbescheinigungen;;annual wage tax statement;Bank, Steuern & Versicherung;Steuern;C1;;Die Lohnsteuerbescheinigung bekommst du im Februar.;You get the wage tax statement in February.;
+der Steuerberater;die Steuerberater;;tax adviser;Bank, Steuern & Versicherung;Steuern;B2;;Für die Steuererklärung gehe ich zum Steuerberater.;I go to a tax adviser for my tax return.;
+die Mehrwertsteuer;;;VAT;Bank, Steuern & Versicherung;Steuern;B2;;Im Preis ist die Mehrwertsteuer enthalten.;VAT is included in the price.;Abbr.: MwSt.
+die Kirchensteuer;;;church tax;Bank, Steuern & Versicherung;Steuern;B2;;Wer nicht in der Kirche ist, zahlt keine Kirchensteuer.;If you're not a church member you pay no church tax.;
+der Solidaritätszuschlag;;;solidarity surcharge;Bank, Steuern & Versicherung;Steuern;C1;;Der Solidaritätszuschlag betrifft nur noch hohe Einkommen.;The solidarity surcharge now only affects high incomes.;Short: Soli.
+die Abgaben;;(Plural);deductions, levies;Bank, Steuern & Versicherung;Steuern;B2;;Nach allen Abgaben bleibt nicht viel übrig.;After all deductions there isn't much left.;
+die Versicherung;die Versicherungen;;insurance;Bank, Steuern & Versicherung;Versicherungen;B1;;Brauche ich diese Versicherung wirklich?;Do I really need this insurance?;
+versichert sein;;;to be insured;Bank, Steuern & Versicherung;Versicherungen;B1;;Ich bin bei der TK versichert.;I'm insured with TK.;
+die Krankenversicherung;die Krankenversicherungen;;health insurance;Bank, Steuern & Versicherung;Versicherungen;B1;;Ohne Krankenversicherung bekommt man kein Visum.;You don't get a visa without health insurance.;
+die Krankenkasse;die Krankenkassen;;health insurance fund;Bank, Steuern & Versicherung;Versicherungen;B1;;Welche Krankenkasse hast du?;Which health insurance fund are you with?;
+gesetzlich versichert;;;publicly insured;Bank, Steuern & Versicherung;Versicherungen;B2;;Die meisten Angestellten sind gesetzlich versichert.;Most employees have public health insurance.;
+privat versichert;;;privately insured;Bank, Steuern & Versicherung;Versicherungen;B2;;Privat versicherte Patienten bekommen oft schneller einen Termin.;Privately insured patients often get an appointment faster.;
+die Haftpflichtversicherung;die Haftpflichtversicherungen;;personal liability insurance;Bank, Steuern & Versicherung;Versicherungen;B2;;Eine Haftpflichtversicherung sollte jeder haben.;Everyone should have personal liability insurance.;Very important in Germany.
+die Hausratversicherung;die Hausratversicherungen;;contents insurance;Bank, Steuern & Versicherung;Versicherungen;B2;;Die Hausratversicherung zahlt bei Einbruch.;Contents insurance pays out in case of burglary.;
+die Kfz-Versicherung;die Kfz-Versicherungen;;car insurance;Bank, Steuern & Versicherung;Versicherungen;B2;;Die Kfz-Versicherung ist bei jungen Fahrern teuer.;Car insurance is expensive for young drivers.;
+die Berufsunfähigkeitsversicherung;die Berufsunfähigkeitsversicherungen;;occupational disability insurance;Bank, Steuern & Versicherung;Versicherungen;C1;;Viele Experten empfehlen eine Berufsunfähigkeitsversicherung.;Many experts recommend disability insurance.;
+die Pflegeversicherung;;;long-term care insurance;Bank, Steuern & Versicherung;Versicherungen;C1;;Die Pflegeversicherung ist Teil der Sozialversicherung.;Long-term care insurance is part of social insurance.;
+die Rentenversicherung;;;pension insurance;Bank, Steuern & Versicherung;Versicherungen;B2;;Die Beiträge zur Rentenversicherung teilen sich Arbeitgeber und Arbeitnehmer.;Employer and employee share the pension contributions.;
+die Arbeitslosenversicherung;;;unemployment insurance;Bank, Steuern & Versicherung;Versicherungen;B2;;Die Arbeitslosenversicherung wird automatisch abgezogen.;Unemployment insurance is deducted automatically.;
+der Beitrag;die Beiträge;;contribution, premium;Bank, Steuern & Versicherung;Versicherungen;B2;;Der monatliche Beitrag beträgt 8 Euro.;The monthly premium is 8 euros.;
+die Police;die Policen;;insurance policy;Bank, Steuern & Versicherung;Versicherungen;C1;;Die Police schicken wir Ihnen per Post.;We'll send you the policy by post.;
+der Versicherungsschutz;;;insurance cover;Bank, Steuern & Versicherung;Versicherungen;C1;;Der Versicherungsschutz beginnt am 1. des Monats.;Insurance cover starts on the 1st of the month.;
+der Schaden;die Schäden;;damage;Bank, Steuern & Versicherung;Versicherungen;B1;;Den Schaden müssen Sie der Versicherung melden.;You have to report the damage to the insurance.;
+der Schadensfall;die Schadensfälle;;claim, case of damage;Bank, Steuern & Versicherung;Versicherungen;C1;formell;Im Schadensfall rufen Sie bitte diese Nummer an.;In the event of a claim, please call this number.;
+die Selbstbeteiligung;die Selbstbeteiligungen;;excess, deductible;Bank, Steuern & Versicherung;Versicherungen;C1;;Die Selbstbeteiligung beträgt 150 Euro.;The excess is 150 euros.;
+übernehmen (Kosten);;übernimmt · übernahm · hat übernommen;to cover (costs);Bank, Steuern & Versicherung;Versicherungen;B2;;Die Krankenkasse übernimmt die Kosten.;The health insurer covers the costs.;
+erstatten;;erstattet · erstattete · hat erstattet;to reimburse;Bank, Steuern & Versicherung;Versicherungen;C1;;Die Kosten werden Ihnen erstattet.;The costs will be reimbursed to you.;
+der Vertrag;die Verträge;;contract;Bank, Steuern & Versicherung;Versicherungen;B1;;Der Vertrag verlängert sich automatisch um ein Jahr.;The contract renews automatically for a year.;
+die Laufzeit;die Laufzeiten;;term, duration (contract);Bank, Steuern & Versicherung;Versicherungen;B2;;Der Vertrag hat eine Laufzeit von 24 Monaten.;The contract has a term of 24 months.;
+das Kleingedruckte;;;the small print;Bank, Steuern & Versicherung;Versicherungen;B2;;Lies immer das Kleingedruckte!;Always read the small print!;
+das Geld;;;money;Bank, Steuern & Versicherung;Geld & Finanzen;A1;;Ich habe gerade nicht viel Geld.;I don't have much money right now.;
+das Bargeld;;;cash;Bank, Steuern & Versicherung;Geld & Finanzen;A2;;Hast du Bargeld dabei?;Do you have cash on you?;
+das Kleingeld;;;change, coins;Bank, Steuern & Versicherung;Geld & Finanzen;A2;;Ich habe kein Kleingeld für den Automaten.;I have no change for the machine.;
+der Schein;die Scheine;;banknote;Bank, Steuern & Versicherung;Geld & Finanzen;A2;;Haben Sie es kleiner? Ich kann den 100-Euro-Schein nicht wechseln.;Do you have anything smaller? I can't change the 100-euro note.;
+die Münze;die Münzen;;coin;Bank, Steuern & Versicherung;Geld & Finanzen;A2;;Für den Einkaufswagen braucht man eine Münze.;You need a coin for the shopping trolley.;
+die Ausgaben;;(Plural);expenses, spending;Bank, Steuern & Versicherung;Geld & Finanzen;B1;;Ich schreibe alle meine Ausgaben auf.;I write down all my expenses.;
+die Einnahmen;;(Plural);income, earnings;Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Die Einnahmen decken die Kosten nicht.;The income doesn't cover the costs.;
+die Fixkosten;;(Plural);fixed costs;Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Miete und Versicherung sind meine Fixkosten.;Rent and insurance are my fixed costs.;
+die Lebenshaltungskosten;;(Plural);cost of living;Bank, Steuern & Versicherung;Geld & Finanzen;C1;;Die Lebenshaltungskosten in München sind sehr hoch.;The cost of living in Munich is very high.;
+sich leisten;;leistet sich · leistete sich · hat sich geleistet;to afford;Bank, Steuern & Versicherung;Geld & Finanzen;B1;;Eine Wohnung in der Innenstadt kann ich mir nicht leisten.;I can't afford a flat in the city centre.;sich (Dat) etwas leisten.
+das Ersparte;;;savings;Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Für den Umzug habe ich mein Erspartes benutzt.;I used my savings for the move.;
+die Ersparnisse;;(Plural);savings;Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Meine Ersparnisse reichen für drei Monate.;My savings will last three months.;
+das Sparkonto;die Sparkonten;;savings account;Bank, Steuern & Versicherung;Geld & Finanzen;B1;;Ich lege jeden Monat 200 Euro aufs Sparkonto.;I put 200 euros into my savings account each month.;
+das Tagesgeld;;;instant-access savings;Bank, Steuern & Versicherung;Geld & Finanzen;C1;;Tagesgeld bringt im Moment etwas Zinsen.;Instant-access savings earn some interest at the moment.;
+die Zinsen;;(Plural);interest;Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Die Zinsen sind gestiegen.;Interest rates have gone up.;
+der Kredit;die Kredite;;loan, credit;Bank, Steuern & Versicherung;Geld & Finanzen;B1;;Für das Auto haben wir einen Kredit aufgenommen.;We took out a loan for the car.;
+die Rate;die Raten;;instalment;Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Ich zahle das Handy in monatlichen Raten ab.;I'm paying off the phone in monthly instalments.;
+die Schulden;;(Plural);debts;Bank, Steuern & Versicherung;Geld & Finanzen;B1;;Er hat Schulden bei der Bank.;He has debts with the bank.;
+die Aktie;die Aktien;;share, stock;Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Er investiert in Aktien.;He invests in shares.;
+der ETF;die ETFs;;ETF (index fund);Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Viele junge Leute sparen mit einem ETF-Sparplan.;Many young people save with an ETF savings plan.;
+anlegen;;legt an · legte an · hat angelegt;to invest;Bank, Steuern & Versicherung;Geld & Finanzen;C1;;Wie legst du dein Geld an?;How do you invest your money?;
+die Inflation;;;inflation;Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Wegen der Inflation ist alles teurer geworden.;Because of inflation everything has got more expensive.;
+der Wechselkurs;die Wechselkurse;;exchange rate;Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Wie ist der Wechselkurs von Euro zu Rupie?;What's the exchange rate from euro to rupee?;
+Geld wechseln;;wechselt · wechselte · hat gewechselt;to exchange money;Bank, Steuern & Versicherung;Geld & Finanzen;A2;;Ich muss am Flughafen Geld wechseln.;I have to change money at the airport.;
+die Auslandsüberweisung;die Auslandsüberweisungen;;international transfer;Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Die Auslandsüberweisung nach Indien kostet Gebühren.;The international transfer to India costs fees.;
+das Haushaltsbuch;die Haushaltsbücher;;household budget book;Bank, Steuern & Versicherung;Geld & Finanzen;B2;;Mit einer App führe ich ein Haushaltsbuch.;I keep a household budget with an app.;
+bezahlen;;bezahlt · bezahlte · hat bezahlt;to pay;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;A1;;Kann ich mit Karte bezahlen?;Can I pay by card?;
+die Quittung;die Quittungen;;receipt;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;A2;;Brauchen Sie eine Quittung?;Do you need a receipt?;
+der Kassenbon;die Kassenbons;;till receipt;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B1;;Ohne Kassenbon kein Umtausch.;No exchange without a receipt.;
+der Rabatt;die Rabatte;;discount;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B1;;Mit Studentenausweis gibt es zehn Prozent Rabatt.;With a student ID there's a ten percent discount.;
+das Sonderangebot;die Sonderangebote;;special offer;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;A2;;Die Butter ist heute im Sonderangebot.;Butter is on special offer today.;
+günstig;;;cheap, good value;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;A2;;Die Wohnung ist relativ günstig.;The flat is relatively cheap.;
+preiswert;;;reasonably priced;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B1;;In der Mensa isst man preiswert.;You can eat cheaply in the canteen.;
+das Pfand;;;deposit (bottles);Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B1;;Auf die Flasche gibt es 25 Cent Pfand.;There's a 25-cent deposit on the bottle.;
+die Anzahlung;die Anzahlungen;;down payment;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B2;;Für das Sofa haben wir eine Anzahlung geleistet.;We made a down payment on the sofa.;
+die Ratenzahlung;die Ratenzahlungen;;payment in instalments;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B2;;Ist auch Ratenzahlung möglich?;Is payment in instalments possible?;
+die Garantie;die Garantien;;guarantee, warranty;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B1;;Auf das Gerät gibt es zwei Jahre Garantie.;The device has a two-year guarantee.;
+die Rückerstattung;die Rückerstattungen;;refund;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B2;;Die Rückerstattung dauert bis zu 14 Tage.;The refund takes up to 14 days.;
+das Widerrufsrecht;;;right of withdrawal;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;C1;formell;Bei Online-Käufen haben Sie 14 Tage Widerrufsrecht.;For online purchases you have a 14-day right of withdrawal.;
+der Handyvertrag;die Handyverträge;;mobile phone contract;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B1;;Mein Handyvertrag läuft im Juni aus.;My phone contract runs out in June.;
+die Prepaidkarte;die Prepaidkarten;;prepaid SIM card;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B1;;Am Anfang hatte ich nur eine Prepaidkarte.;At first I only had a prepaid SIM.;
+der Tarif;die Tarife;;tariff, plan;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B1;;Ich suche einen günstigeren Tarif.;I'm looking for a cheaper plan.;
+die Kündigungsbestätigung;die Kündigungsbestätigungen;;confirmation of cancellation;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B2;;Ich warte noch auf die Kündigungsbestätigung.;I'm still waiting for the cancellation confirmation.;
+sich automatisch verlängern;;verlängert sich · verlängerte sich · hat sich verlängert;to renew automatically;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B2;;Das Abo verlängert sich automatisch um ein Jahr.;The subscription renews automatically for a year.;
+das Abo;die Abos;;subscription;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B1;umg;Ich habe mein Netflix-Abo gekündigt.;I cancelled my Netflix subscription.;Full: Abonnement.
+das Vergleichsportal;die Vergleichsportale;;comparison website;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B2;;Strom vergleiche ich auf einem Vergleichsportal.;I compare electricity prices on a comparison site.;
+der Betrug;;;fraud, scam;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;B2;;Diese SMS ist Betrug, klick nicht auf den Link!;This text is a scam, don't click the link!;
+die Kontonummer;die Kontonummern;;account number;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;A2;;Geben Sie niemals Ihre Kontonummer am Telefon weiter.;Never give out your account number on the phone.;
+die Geldbörse;die Geldbörsen;;wallet, purse;Bank, Steuern & Versicherung;Bezahlen & Verträge im Alltag;A2;;Ich habe meine Geldbörse im Bus vergessen.;I left my wallet on the bus.;umg: Geldbeutel / Portemonnaie.
+die Altersvorsorge;;;retirement provision;Bank, Steuern & Versicherung;Vorsorge & Rente;C1;;Man sollte früh mit der Altersvorsorge anfangen.;You should start planning for retirement early.;
+die Betriebsrente;die Betriebsrenten;;company pension;Bank, Steuern & Versicherung;Vorsorge & Rente;C1;;Die Firma zahlt in eine Betriebsrente ein.;The company pays into a company pension.;
+die Riester-Rente;;;state-subsidised private pension;Bank, Steuern & Versicherung;Vorsorge & Rente;C1;;Lohnt sich die Riester-Rente noch?;Is the Riester pension still worth it?;
+der Rentenbescheid;die Rentenbescheide;;pension statement;Bank, Steuern & Versicherung;Vorsorge & Rente;C1;formell;Im Rentenbescheid steht, wie viel Rente ich bekomme.;The pension statement says how much pension I'll get.;
+die Renteninformation;die Renteninformationen;;annual pension information;Bank, Steuern & Versicherung;Vorsorge & Rente;C1;;Die Renteninformation kommt jedes Jahr per Post.;The pension information arrives by post every year.;
+die Sozialversicherungsnummer;die Sozialversicherungsnummern;;social security number;Bank, Steuern & Versicherung;Vorsorge & Rente;B2;;Die Sozialversicherungsnummer braucht der Arbeitgeber.;The employer needs the social security number.;
+das Vermögen;die Vermögen;;wealth, assets;Bank, Steuern & Versicherung;Vorsorge & Rente;C1;;Er hat ein großes Vermögen geerbt.;He inherited a large fortune.;
+erben;;erbt · erbte · hat geerbt;to inherit;Bank, Steuern & Versicherung;Vorsorge & Rente;B2;;Sie hat das Haus ihrer Oma geerbt.;She inherited her grandma's house.;
+das Testament;die Testamente;;will (legal);Bank, Steuern & Versicherung;Vorsorge & Rente;C1;;Er hat kein Testament gemacht.;He didn't make a will.;
+die Finanzen;;(Plural);finances;Bank, Steuern & Versicherung;Vorsorge & Rente;B2;;Um die Finanzen kümmert sich meine Frau.;My wife takes care of the finances.;
+die Finanzierung;die Finanzierungen;;financing;Bank, Steuern & Versicherung;Vorsorge & Rente;B2;;Die Finanzierung des Hauses steht.;The financing for the house is in place.;
+die Hypothek;die Hypotheken;;mortgage;Bank, Steuern & Versicherung;Vorsorge & Rente;C1;;Für die Wohnung haben sie eine Hypothek aufgenommen.;They took out a mortgage for the flat.;Also common: Baufinanzierung.
+das Eigenkapital;;;equity, own funds;Bank, Steuern & Versicherung;Vorsorge & Rente;C1;;Die Bank verlangt 20 Prozent Eigenkapital.;The bank requires 20 percent equity.;
+knapp bei Kasse sein;;;to be short of money;Bank, Steuern & Versicherung;Rund ums Geld – Wendungen;B2;umg;Ende des Monats bin ich immer knapp bei Kasse.;At the end of the month I'm always short of cash.;
+über die Runden kommen;;kommt · kam · ist gekommen;to make ends meet;Bank, Steuern & Versicherung;Rund ums Geld – Wendungen;C1;umg;Mit dem Gehalt komme ich gerade so über die Runden.;I just about make ends meet on my salary.;
+sich lohnen (finanziell);;lohnt sich · lohnte sich · hat sich gelohnt;to pay off, to be worthwhile;Bank, Steuern & Versicherung;Rund ums Geld – Wendungen;B1;;Das Jobticket lohnt sich für mich.;The job ticket pays off for me.;
+das Preis-Leistungs-Verhältnis;;;value for money;Bank, Steuern & Versicherung;Rund ums Geld – Wendungen;B2;;Das Hotel hat ein gutes Preis-Leistungs-Verhältnis.;The hotel offers good value for money.;
+Geld zum Fenster hinauswerfen;;wirft · warf · hat geworfen;to throw money down the drain;Bank, Steuern & Versicherung;Rund ums Geld – Wendungen;C1;umg;Das teure Abo ist Geld zum Fenster hinausgeworfen.;That expensive subscription is money down the drain.;
+die Rechnung begleichen;;begleicht · beglich · hat beglichen;to settle the bill;Bank, Steuern & Versicherung;Rund ums Geld – Wendungen;C1;formell;Bitte begleichen Sie die Rechnung innerhalb von 14 Tagen.;Please settle the invoice within 14 days.;
+zahlungsunfähig;;;insolvent, unable to pay;Bank, Steuern & Versicherung;Rund ums Geld – Wendungen;C1;;Die Firma ist zahlungsunfähig.;The company is insolvent.;
+das Trinkgeld;die Trinkgelder;;tip;Bank, Steuern & Versicherung;Rund ums Geld – Wendungen;A2;;In Deutschland gibt man etwa zehn Prozent Trinkgeld.;In Germany you tip about ten percent.;
+stimmt so;;;keep the change;Bank, Steuern & Versicherung;Rund ums Geld – Wendungen;A2;umg;Das macht 18,50. – Hier sind 20, stimmt so.;That's 18.50. – Here's 20, keep the change.;How Germans tip in restaurants.
+zusammen oder getrennt?;;;together or separately?;Bank, Steuern & Versicherung;Rund ums Geld – Wendungen;A2;;Zahlen Sie zusammen oder getrennt?;Are you paying together or separately?;Standard question from waiters.
