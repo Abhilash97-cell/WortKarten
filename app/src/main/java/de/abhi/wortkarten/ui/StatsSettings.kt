@@ -1,8 +1,10 @@
+@file:OptIn(ExperimentalMaterial3Api::class)
+
 package de.abhi.wortkarten.ui
 
 import android.Manifest
+import android.app.TimePickerDialog
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Build
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -10,468 +12,202 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
-import androidx.compose.material.icons.outlined.*
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
-import de.abhi.wortkarten.data.*
+import de.abhi.wortkarten.data.LEVELS
+import de.abhi.wortkarten.data.Status
+import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.time.format.TextStyle
 import java.util.Locale
 
 @Composable
-fun StatsScreen(state: UiState) {
-    val stats = remember(state.words, state.progress) {
-        Srs.computeCounts(state.words, state.progress)
-    }
-    val total = state.words.size.coerceAtLeast(1)
+fun StatsScreen(vm: MainViewModel, back: () -> Unit) {
+    val stats by vm.stats.collectAsState()
+    val words by vm.words.collectAsState()
+    val days = (6 downTo 0).map { LocalDate.now().minusDays(it.toLong()) }
+    val values = days.map { stats[it.toString()]?.reviewed ?: 0 }
+    val max = (values.maxOrNull() ?: 0).coerceAtLeast(1)
 
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 18.dp, vertical = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(14.dp)
-    ) {
-        item {
-            Text(
-                "Statistik",
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.ExtraBold
-            )
-            Text(
-                "Dein Lernfortschritt im Überblick",
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-
-        // Streak & Today
-        item {
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                BigStatCard(
-                    modifier = Modifier.weight(1f),
-                    icon = "🔥",
-                    value = "${state.settings.streak}",
-                    label = "Tage-Serie"
-                )
-                BigStatCard(
-                    modifier = Modifier.weight(1f),
-                    icon = "✅",
-                    value = "${state.settings.todayReviewed}",
-                    label = "Heute gelernt"
-                )
-            }
-        }
-
-        // Breakdown card
-        item {
-            Surface(
-                shape = RoundedCornerShape(18.dp),
-                color = MaterialTheme.colorScheme.surface
+    Scaffold(topBar = {
+        TopAppBar(title = { Text("Statistik") },
+            navigationIcon = { IconButton(back) { Icon(Icons.AutoMirrored.Filled.ArrowBack, "Zurück") } })
+    }) { pad ->
+        Column(
+            Modifier.padding(pad).padding(16.dp).verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            Text("Wiederholungen – letzte 7 Tage", style = MaterialTheme.typography.titleMedium)
+            Row(
+                Modifier.fillMaxWidth().height(180.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.Bottom
             ) {
-                Column(Modifier.padding(18.dp)) {
-                    Text(
-                        "Wortschatz-Status",
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold
-                    )
-                    Spacer(Modifier.height(14.dp))
-                    StatusRow("Gemeistert (21+ Tage)", stats.mastered, total, Color(0xFF66BB6A))
-                    Spacer(Modifier.height(10.dp))
-                    StatusRow("Im Lernen", stats.learning, total, Color(0xFFFFCC00))
-                    Spacer(Modifier.height(10.dp))
-                    StatusRow("Noch neu", stats.newCount, total, Color(0xFF42A5F5))
-                    Spacer(Modifier.height(10.dp))
-                    StatusRow("Aktuell fällig", stats.due, total, Color(0xFFFF7043))
-                }
-            }
-        }
-
-        // Last 14 days activity chart
-        item {
-            Surface(
-                shape = RoundedCornerShape(18.dp),
-                color = MaterialTheme.colorScheme.surface
-            ) {
-                Column(Modifier.padding(18.dp)) {
-                    Text(
-                        "Letzte 14 Tage",
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold
-                    )
-                    Spacer(Modifier.height(14.dp))
-                    val days = (13 downTo 0).map { LocalDate.now().minusDays(it.toLong()) }
-                    val counts = days.map { state.history[it.toString()] ?: 0 }
-                    val max = (counts.maxOrNull() ?: 1).coerceAtLeast(10)
-
-                    Row(
-                        Modifier
-                            .fillMaxWidth()
-                            .height(120.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.Bottom
+                days.zip(values).forEach { (d, v) ->
+                    Column(
+                        Modifier.fillMaxHeight(), horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Bottom
                     ) {
-                        days.forEachIndexed { idx, d ->
-                            val c = counts[idx]
-                            val frac = (c.toFloat() / max.toFloat()).coerceIn(0.06f, 1f)
-                            Column(
-                                horizontalAlignment = Alignment.CenterHorizontally,
-                                modifier = Modifier.weight(1f)
-                            ) {
-                                Box(
-                                    Modifier
-                                        .width(12.dp)
-                                        .fillMaxHeight(frac * 0.8f)
-                                        .clip(RoundedCornerShape(4.dp))
-                                        .background(
-                                            if (c > 0) MaterialTheme.colorScheme.primary
-                                            else MaterialTheme.colorScheme.surfaceVariant
-                                        )
-                                )
-                                Spacer(Modifier.height(6.dp))
-                                Text(
-                                    d.dayOfWeek.getDisplayName(TextStyle.NARROW, Locale.GERMAN),
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
-                            }
-                        }
+                        Text("$v", style = MaterialTheme.typography.labelSmall)
+                        Box(
+                            Modifier.width(24.dp).fillMaxHeight(0.75f * v / max + 0.01f)
+                                .background(MaterialTheme.colorScheme.primary)
+                        )
+                        Text(d.dayOfWeek.getDisplayName(TextStyle.SHORT, Locale.GERMAN), style = MaterialTheme.typography.labelSmall)
                     }
                 }
             }
-        }
+            Text("Serie: ${vm.streak()} Tage 🔥   •   Schwierige Wörter (≥ 3× vergessen): ${words.count { it.lapses >= 3 }}")
 
-        // Level progress
-        item {
-            Surface(
-                shape = RoundedCornerShape(18.dp),
-                color = MaterialTheme.colorScheme.surface
-            ) {
-                Column(Modifier.padding(18.dp)) {
-                    Text(
-                        "Nach Niveau (GER)",
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold
-                    )
-                    Spacer(Modifier.height(12.dp))
-                    listOf("A1", "A2", "B1", "B2", "C1").forEach { lvl ->
-                        val inLvl = state.words.filter { it.level.equals(lvl, true) }
-                        if (inLvl.isNotEmpty()) {
-                            val seen = inLvl.count { (state.progress[it.id]?.reps ?: 0) > 0 }
-                            StatusRow(
-                                "$lvl  ($seen / ${inLvl.size})",
-                                seen,
-                                inLvl.size,
-                                levelColor(lvl)
-                            )
-                            Spacer(Modifier.height(10.dp))
-                        }
-                    }
+            Text("Fortschritt nach Niveau", style = MaterialTheme.typography.titleMedium)
+            Row { listOf("Niveau") .plus(Status.entries.map { it.emoji }).plus("∑").forEach {
+                Text(it, Modifier.weight(1f), fontWeight = FontWeight.Bold) } }
+            LEVELS.forEach { lv ->
+                val ws = words.filter { it.level == lv }
+                val c = ws.groupingBy { it.status }.eachCount()
+                Row {
+                    Text(lv, Modifier.weight(1f), fontWeight = FontWeight.Bold)
+                    Status.entries.forEach { s -> Text("${c[s] ?: 0}", Modifier.weight(1f), color = statusColor(s)) }
+                    Text("${ws.size}", Modifier.weight(1f))
                 }
             }
+            Text("🆕 Neu · ✅ Kenne ich schon · 🔁 Üben · 🟢 Gelernt", style = MaterialTheme.typography.bodySmall)
         }
     }
 }
 
 @Composable
-private fun BigStatCard(
-    modifier: Modifier = Modifier,
-    icon: String,
-    value: String,
-    label: String
-) {
-    Surface(
-        modifier = modifier,
-        shape = RoundedCornerShape(18.dp),
-        color = MaterialTheme.colorScheme.surface
-    ) {
-        Column(Modifier.padding(18.dp)) {
-            Text(icon, style = MaterialTheme.typography.headlineMedium)
-            Spacer(Modifier.height(6.dp))
-            Text(
-                value,
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.ExtraBold
-            )
-            Text(
-                label,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-    }
-}
-
-@Composable
-private fun StatusRow(label: String, value: Int, total: Int, color: Color) {
-    val pct = (value.toFloat() / total.toFloat()).coerceIn(0f, 1f)
-    Column {
-        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-            Text(label, style = MaterialTheme.typography.bodyMedium)
-            Text(
-                "$value (${(pct * 100).toInt()}%)",
-                style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.Bold,
-                color = color
-            )
-        }
-        Spacer(Modifier.height(5.dp))
-        LinearProgressIndicator(
-            progress = { pct },
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(8.dp)
-                .clip(RoundedCornerShape(4.dp)),
-            color = color,
-            trackColor = MaterialTheme.colorScheme.surfaceVariant
-        )
-    }
-}
-
-// =====================================================================
-// SETTINGS SCREEN
-// =====================================================================
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun SettingsScreen(
-    state: UiState,
-    onUpdate: ((AppSettings) -> AppSettings) -> Unit,
-    onExport: (Uri, (Boolean) -> Unit) -> Unit,
-    onImport: (Uri, (Int) -> Unit) -> Unit,
-    onReset: () -> Unit,
-    onNavigateToAbout: () -> Unit
-) {
+fun SettingsScreen(vm: MainViewModel, back: () -> Unit, onAbout: () -> Unit = {}) {
+    val settings by vm.settings.collectAsState()
     val ctx = LocalContext.current
-    val s = state.settings
+    val scope = rememberCoroutineScope()
     var confirmReset by remember { mutableStateOf(false) }
-    var showTimePicker by remember { mutableStateOf(false) }
+    fun toast(s: String) = Toast.makeText(ctx, s, Toast.LENGTH_LONG).show()
 
-    val notifPermLauncher = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { granted ->
-        onUpdate { it.copy(reminderEnabled = granted) }
-        if (!granted) {
-            Toast.makeText(ctx, "Benachrichtigungs-Berechtigung verweigert", Toast.LENGTH_SHORT).show()
+    val csvImport = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        uri ?: return@rememberLauncherForActivityResult
+        scope.launch {
+            val text = runCatching { ctx.contentResolver.openInputStream(uri)!!.bufferedReader(Charsets.UTF_8).use { it.readText() } }.getOrNull()
+            toast(if (text == null) "Datei konnte nicht gelesen werden" else "${vm.importCsv(text)} Wörter importiert")
         }
     }
-
-    val exportLauncher = rememberLauncherForActivityResult(
-        ActivityResultContracts.CreateDocument("application/json")
-    ) { uri ->
-        if (uri != null) {
-            onExport(uri) { ok ->
-                Toast.makeText(
-                    ctx,
-                    if (ok) "Backup gespeichert" else "Fehler beim Speichern",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+    val csvExport = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/csv")) { uri ->
+        uri ?: return@rememberLauncherForActivityResult
+        runCatching { ctx.contentResolver.openOutputStream(uri)!!.use { it.write(vm.exportCsv().toByteArray(Charsets.UTF_8)) } }
+            .onSuccess { toast("Wortliste exportiert") }
+    }
+    val backupSave = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
+        uri ?: return@rememberLauncherForActivityResult
+        runCatching { ctx.contentResolver.openOutputStream(uri)!!.use { it.write(vm.backupJson().toByteArray(Charsets.UTF_8)) } }
+            .onSuccess { toast("Backup gespeichert") }
+    }
+    val backupLoad = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        uri ?: return@rememberLauncherForActivityResult
+        scope.launch {
+            val text = runCatching { ctx.contentResolver.openInputStream(uri)!!.bufferedReader(Charsets.UTF_8).use { it.readText() } }.getOrNull()
+            toast(if (text != null && vm.restoreBackup(text)) "Backup wiederhergestellt" else "Ungültige Backup-Datei")
         }
     }
-
-    val importLauncher = rememberLauncherForActivityResult(
-        ActivityResultContracts.OpenDocument()
-    ) { uri ->
-        if (uri != null) {
-            onImport(uri) { count ->
-                Toast.makeText(
-                    ctx,
-                    if (count >= 0) "$count Einträge wiederhergestellt" else "Ungültige Datei",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-        }
+    val notifPermission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { ok ->
+        if (ok) vm.setReminder(true) else toast("Ohne Erlaubnis keine Erinnerung möglich")
     }
 
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 18.dp, vertical = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(14.dp)
-    ) {
-        item {
-            Text(
-                "Einstellungen",
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.ExtraBold
-            )
-        }
+    Scaffold(topBar = {
+        TopAppBar(title = { Text("Einstellungen") },
+            navigationIcon = { IconButton(back) { Icon(Icons.AutoMirrored.Filled.ArrowBack, "Zurück") } })
+    }) { pad ->
+        Column(
+            Modifier.padding(pad).padding(16.dp).verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            Text("Lernen", style = MaterialTheme.typography.titleMedium)
+            Text("Tagesziel: ${settings.dailyGoal} neue Wörter")
+            Slider(settings.dailyGoal.toFloat(), { vm.setGoal(it.toInt()) }, valueRange = 5f..50f, steps = 8)
 
-        // Daily goal & session size
-        item {
-            SettingsCard("Lernen") {
-                Text(
-                    "Tagesziel: ${s.dailyGoal} Karten",
-                    fontWeight = FontWeight.SemiBold
-                )
-                Slider(
-                    value = s.dailyGoal.toFloat(),
-                    onValueChange = { v -> onUpdate { it.copy(dailyGoal = v.toInt()) } },
-                    valueRange = 5f..100f,
-                    steps = 18
-                )
-                Spacer(Modifier.height(6.dp))
-                Text(
-                    "Sitzungsgröße: ${s.sessionSize} Karten",
-                    fontWeight = FontWeight.SemiBold
-                )
-                Slider(
-                    value = s.sessionSize.toFloat(),
-                    onValueChange = { v -> onUpdate { it.copy(sessionSize = v.toInt()) } },
-                    valueRange = 5f..50f,
-                    steps = 8
-                )
-                Spacer(Modifier.height(6.dp))
-                Row(
-                    Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Column(Modifier.weight(1f)) {
-                        Text("Aussprache automatisch abspielen", fontWeight = FontWeight.SemiBold)
-                        Text(
-                            "Spricht jedes Wort beim Öffnen der Karte",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                    Switch(
-                        checked = s.autoplayAudio,
-                        onCheckedChange = { v -> onUpdate { it.copy(autoplayAudio = v) } }
-                    )
+            Text("Anteil A1–A2 bei neuen Wörtern: ${settings.basicShare} %")
+            Slider(settings.basicShare.toFloat(), { vm.setBasicShare(it.toInt()) }, valueRange = 0f..50f, steps = 9)
+            Text("Der Rest kommt aus B1 → B2 → C1.", style = MaterialTheme.typography.bodySmall)
+
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Column(Modifier.weight(1f)) {
+                    Text("Beide Richtungen abfragen")
+                    Text("Deutsch → Übersetzung und Übersetzung → Deutsch. 🟢 Gelernt erst, wenn beides sitzt.",
+                        style = MaterialTheme.typography.bodySmall)
                 }
+                Switch(settings.bothDirections, { vm.setBothDirections(it) })
             }
-        }
 
-        // Daily Reminder
-        item {
-            SettingsCard("Tägliche Erinnerung") {
-                Row(
-                    Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Column(Modifier.weight(1f)) {
-                        Text("Erinnerung aktivieren", fontWeight = FontWeight.SemiBold)
-                        Text(
-                            "Benachrichtigt dich einmal täglich mit fälligen Karten",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                    Switch(
-                        checked = s.reminderEnabled,
-                        onCheckedChange = { enable ->
-                            if (enable && Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                                val granted = ContextCompat.checkSelfPermission(
-                                    ctx, Manifest.permission.POST_NOTIFICATIONS
-                                ) == PackageManager.PERMISSION_GRANTED
-                                if (!granted) {
-                                    notifPermLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-                                } else {
-                                    onUpdate { it.copy(reminderEnabled = true) }
-                                }
-                            } else {
-                                onUpdate { it.copy(reminderEnabled = enable) }
-                            }
-                        }
-                    )
-                }
-
-                Spacer(Modifier.height(10.dp))
-                OutlinedButton(
-                    onClick = { showTimePicker = true },
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(12.dp)
-                ) {
-                    Icon(Icons.Outlined.Schedule, contentDescription = null)
-                    Spacer(Modifier.width(8.dp))
-                    Text(
-                        "Uhrzeit: %02d:%02d Uhr".format(s.reminderHour, s.reminderMinute),
-                        fontWeight = FontWeight.Bold
-                    )
-                }
+            HorizontalDivider()
+            Text("Erinnerung", style = MaterialTheme.typography.titleMedium)
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text("Tägliche Erinnerung", Modifier.weight(1f))
+                Switch(settings.reminderOn, { on ->
+                    if (on && Build.VERSION.SDK_INT >= 33 &&
+                        ContextCompat.checkSelfPermission(ctx, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED
+                    ) notifPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
+                    else vm.setReminder(on)
+                })
             }
-        }
+            if (settings.reminderOn) OutlinedButton({
+                TimePickerDialog(ctx, { _, h, m -> vm.setReminderTime(h, m) },
+                    settings.reminderHour, settings.reminderMinute, true).show()
+            }) { Text("Uhrzeit: %02d:%02d".format(settings.reminderHour, settings.reminderMinute)) }
 
-        // Theme
-        item {
-            SettingsCard("Darstellung") {
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    listOf(
-                        "dark" to "Dunkel",
-                        "light" to "Hell",
-                        "system" to "System"
-                    ).forEach { (key, label) ->
-                        FilterChip(
-                            selected = s.theme == key,
-                            onClick = { onUpdate { it.copy(theme = key) } },
-                            label = { Text(label) }
-                        )
-                    }
-                }
+            HorizontalDivider()
+            Text("Wortlisten & Backup", style = MaterialTheme.typography.titleMedium)
+            Text("CSV (UTF-8, Semikolon):\ngerman;plural;grammar;translation;category;subtopic;level;register;example;example_en;note",
+                style = MaterialTheme.typography.bodySmall)
+            Button({ csvImport.launch(arrayOf("text/*", "application/csv", "application/vnd.ms-excel", "*/*")) },
+                Modifier.fillMaxWidth()) { Text("CSV importieren") }
+            OutlinedButton({ csvExport.launch("wortkarten_woerter.csv") }, Modifier.fillMaxWidth()) { Text("Wortliste als CSV exportieren") }
+            Button({ backupSave.launch("wortkarten_backup_${LocalDate.now()}.json") }, Modifier.fillMaxWidth()) {
+                Text("Backup speichern (inkl. Fortschritt)")
             }
-        }
-
-        // Backup & Reset
-        item {
-            SettingsCard("Daten & Backup") {
-                OutlinedButton(
-                    onClick = { exportLauncher.launch("wortkarten_backup_${LocalDate.now()}.json") },
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(12.dp)
-                ) {
-                    Icon(Icons.Outlined.Upload, contentDescription = null)
-                    Spacer(Modifier.width(8.dp))
-                    Text("Fortschritt exportieren (JSON)")
-                }
-                Spacer(Modifier.height(8.dp))
-                OutlinedButton(
-                    onClick = { importLauncher.launch(arrayOf("application/json", "*/*")) },
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(12.dp)
-                ) {
-                    Icon(Icons.Outlined.Download, contentDescription = null)
-                    Spacer(Modifier.width(8.dp))
-                    Text("Backup importieren")
-                }
-                Spacer(Modifier.height(8.dp))
-                OutlinedButton(
-                    onClick = { confirmReset = true },
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFFEF5350))
-                ) {
-                    Icon(Icons.Outlined.DeleteForever, contentDescription = null)
-                    Spacer(Modifier.width(8.dp))
-                    Text("Lernfortschritt zurücksetzen")
-                }
+            OutlinedButton({ backupLoad.launch(arrayOf("application/json", "*/*")) }, Modifier.fillMaxWidth()) {
+                Text("Backup wiederherstellen")
             }
-        }
+            Text("Vor dem Deinstallieren oder Handywechsel immer ein Backup speichern.",
+                style = MaterialTheme.typography.bodySmall)
 
-        // About WortKarten Menu Item
-        item {
-            SettingsCard("Info") {
+            HorizontalDivider()
+            OutlinedButton({ confirmReset = true }, Modifier.fillMaxWidth()) {
+                Text("Gesamten Lernfortschritt zurücksetzen", color = MaterialTheme.colorScheme.error)
+            }
+            Text("Aussprache nutzt die Sprachausgabe deines Handys. Falls stumm: Android-Einstellungen → Text-in-Sprache → deutsche Stimme installieren.",
+                style = MaterialTheme.typography.bodySmall)
+            Text("Wörter hinzufügen aus anderen Apps: Text markieren → „Zu WortKarten“, oder Teilen → WortKarten.",
+                style = MaterialTheme.typography.bodySmall)
+
+            HorizontalDivider()
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onAbout() },
+                shape = RoundedCornerShape(12.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
+                )
+            ) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clip(RoundedCornerShape(12.dp))
-                        .clickable { onNavigateToAbout() }
-                        .padding(vertical = 10.dp, horizontal = 4.dp),
+                        .padding(horizontal = 16.dp, vertical = 14.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Icon(
-                        imageVector = Icons.Outlined.Info,
+                        imageVector = Icons.Default.Info,
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.primary
                     )
@@ -479,7 +215,7 @@ fun SettingsScreen(
                     Text(
                         text = "About WortKarten",
                         style = MaterialTheme.typography.bodyLarge,
-                        fontWeight = FontWeight.SemiBold,
+                        fontWeight = FontWeight.Medium,
                         modifier = Modifier.weight(1f)
                     )
                     Icon(
@@ -491,67 +227,11 @@ fun SettingsScreen(
             }
         }
     }
-
-    if (showTimePicker) {
-        val pickerState = rememberTimePickerState(
-            initialHour = s.reminderHour,
-            initialMinute = s.reminderMinute,
-            is24Hour = true
-        )
-        AlertDialog(
-            onDismissRequest = { showTimePicker = false },
-            confirmButton = {
-                TextButton(onClick = {
-                    onUpdate {
-                        it.copy(
-                            reminderHour = pickerState.hour,
-                            reminderMinute = pickerState.minute
-                        )
-                    }
-                    showTimePicker = false
-                }) { Text("Speichern") }
-            },
-            dismissButton = {
-                TextButton(onClick = { showTimePicker = false }) { Text("Abbrechen") }
-            },
-            title = { Text("Erinnerungszeit") },
-            text = { TimePicker(state = pickerState) }
-        )
-    }
-
-    if (confirmReset) {
-        AlertDialog(
-            onDismissRequest = { confirmReset = false },
-            confirmButton = {
-                TextButton(onClick = {
-                    onReset()
-                    confirmReset = false
-                }) { Text("Zurücksetzen", color = Color(0xFFEF5350)) }
-            },
-            dismissButton = {
-                TextButton(onClick = { confirmReset = false }) { Text("Abbrechen") }
-            },
-            title = { Text("Alles zurücksetzen?") },
-            text = { Text("Dein gesamter Lernfortschritt, Favoriten und Notizen werden gelöscht.") }
-        )
-    }
-}
-
-@Composable
-private fun SettingsCard(title: String, content: @Composable ColumnScope.() -> Unit) {
-    Surface(
-        shape = RoundedCornerShape(18.dp),
-        color = MaterialTheme.colorScheme.surface,
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Column(Modifier.padding(18.dp)) {
-            Text(
-                title,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold
-            )
-            Spacer(Modifier.height(12.dp))
-            content()
-        }
-    }
+    if (confirmReset) AlertDialog(
+        onDismissRequest = { confirmReset = false },
+        title = { Text("Wirklich zurücksetzen?") },
+        text = { Text("Alle Wörter werden wieder 🆕 Neu. Die Wörter selbst bleiben erhalten.") },
+        confirmButton = { TextButton({ vm.resetAll(); confirmReset = false }) { Text("Zurücksetzen") } },
+        dismissButton = { TextButton({ confirmReset = false }) { Text("Abbrechen") } }
+    )
 }
